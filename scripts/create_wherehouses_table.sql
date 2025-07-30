@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS m1_evaluation.wherehouses (
+    id INTEGER(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+)

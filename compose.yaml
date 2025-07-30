@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: m1_evaluation
+    ports:
+      - "3307:3306"
+    volumes:
+      - m1-db-volume:/var/lib/mysql
+
+volumes:
+  m1-db-volume:
