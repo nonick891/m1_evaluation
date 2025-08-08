@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS m1_evaluation.leads (
-    id INTEGER(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    product_id INTEGER(11) NOT NULL,
-    country_id INTEGER(4) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    amount INTEGER(11) NOT NULL,
-)
