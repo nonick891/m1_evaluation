@@ -2,7 +2,8 @@
 # Тестовые задачи для компании m1
 
 ### Задание 2
-[Миграции](./migrations) отдельных таблиц. [Схема базы данных](./database_schame.sql)
+- [Миграции](./migrations) отдельных таблиц;
+- [Схема](./database_schame.sql) базы данных.
 
 # Docker run
 
@@ -15,6 +16,11 @@
 ### Test access
     docker exec m1_evaluation mysql -u root -proot -e "SELECT * FROM m1_evaluation.country_currencies;"
 
+### Migrate fresh database
+Combination of `Copy files`, `Change ownership after cp`, `Execute queries`.
+
+    ./bash_commands/migrate.sh
+
 ### Copy folder
     docker cp ./scripts/ m1_evaluation:/docker-entrypoint-initdb.d/
 
@@ -26,11 +32,6 @@
 
 ### Execute queries
     for file in ./scripts/*.sql; do docker exec -i m1_evaluation mysql -u root -proot m1_evaluation < ./scripts/$(basename ${file}); done
-
-### Migrate fresh database
-Combination of `Copy files`, `Change ownership after cp`, `Execute queries`.
-
-    ./bash_commands/migrate.sh
 
 # Docker compose
     docker compose up

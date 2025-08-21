@@ -4,6 +4,7 @@ create table if not exists m1_evaluation.carts
     customer_id integer(11) not null,
     price integer(11) not null,
     created_at datetime not null,
+    updated_at datetime not null,
 
     -- Indexes
     index idx_customer_id (customer_id),
